@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:b="http://bootsfaces.net/ui">
+    <h:body>
+        <ui:composition template="../../layout/admin-template.xhtml">
+            <ui:define name="title">
+                <h:outputText value="#{bundle.ListNewsTitle}"></h:outputText>
+            </ui:define>
+            <ui:define name="content">
+                <h:form styleClass="jsfcrud_list_form">
+                    <h:panelGroup id="messagePanel" layout="block">
+                        <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                    </h:panelGroup>
+
+                    <h:panelGroup rendered="#{newsController.items.rowCount > 0}">
+                        <h:outputText value="#{newsController.pagination.pageFirstItem + 1}..#{newsController.pagination.pageLastItem + 1}/#{newsController.pagination.itemsCount}"/>&nbsp;
+                        <h:commandLink action="#{newsController.previous}" value="#{bundle.Previous} #{newsController.pagination.pageSize}" rendered="#{newsController.pagination.hasPreviousPage}"/>&nbsp;
+                        <h:commandLink action="#{newsController.next}" value="#{bundle.Next} #{newsController.pagination.pageSize}" rendered="#{newsController.pagination.hasNextPage}"/>&nbsp;
+
+                        <b:dataTable value="#{newsController.items}" var="item" border="0" style="border:solid 1px">
+                            <b:dataTableColumn label="#{bundle.ListNewsTitle_newsid}" value="#{item.newsid}" width="30"/>
+                            <b:dataTableColumn label="#{bundle.ListNewsTitle_newstitle}" value="#{item.newstitle}" width="10vw"/>
+                            <b:dataTableColumn label="#{bundle.ListNewsTitle_newsdate}" value="#{item.newsdate}" width="10vw"/>
+
+                            <b:dataTableColumn label="Action" width="10vw">
+                                <b:commandButton styleClass="btn-block" look="warning" 
+                                                 value="#{bundle.ListNewsViewLink}" action="#{newsController.prepareView}"/>
+                            </b:dataTableColumn>
+                        </b:dataTable>
+                    </h:panelGroup>
+                    <br />
+                    <br />
+                    <br />
+                    <h:link outcome="/index" value="#{bundle.ListNewsIndexLink}"/>
+                </h:form>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>

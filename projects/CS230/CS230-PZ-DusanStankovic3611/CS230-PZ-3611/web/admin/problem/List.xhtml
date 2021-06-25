@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:b="http://bootsfaces.net/ui">
+    <h:body>
+        <ui:composition template="../../layout/admin-template.xhtml">
+            <ui:define name="title">
+                <h:outputText value="Problems"></h:outputText>
+            </ui:define>
+            <ui:define name="content">
+                <h:form styleClass="jsfcrud_list_form">
+                    <h:panelGroup id="messagePanel" layout="block">
+                        <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                    </h:panelGroup>
+
+                    <h:panelGroup rendered="#{problemController.items.rowCount > 0}">
+                        <h:outputText value="#{problemController.pagination.pageFirstItem + 1}..#{problemController.pagination.pageLastItem + 1}/#{problemController.pagination.itemsCount}"/>&nbsp;
+                        <h:commandLink action="#{problemController.previous}" value="#{bundle.Previous} #{problemController.pagination.pageSize}" rendered="#{problemController.pagination.hasPreviousPage}"/>&nbsp;
+                        <h:commandLink action="#{problemController.next}" value="#{bundle.Next} #{problemController.pagination.pageSize}" rendered="#{problemController.pagination.hasNextPage}"/>&nbsp;
+
+                        <b:dataTable value="#{problemController.items}" var="item" border="0" style="border:solid 1px">
+                            <b:dataTableColumn label="#{bundle.ListProblemTitle_problemid}" value="#{item.problemid}" width="30"/>
+                            <b:dataTableColumn label="#{bundle.ListProblemTitle_problemname}" value="#{item.problemname}" width="10vw"/>
+                            <b:dataTableColumn label="#{bundle.ListProblemTitle_problemdetalis}" value="#{item.problemdetalis}" width="30vw"/>
+
+                            <b:dataTableColumn label="Action">
+                                <b:commandButton styleClass="btn-block" look="warning" value="#{bundle.ListProblemViewLink}" action="#{problemController.prepareView}"/>
+                                <b:navCommandLink styleClass="btn btn-danger btn-block" value="#{bundle.ListProblemDestroyLink}" action="#{problemController.destroy}"></b:navCommandLink>
+                            </b:dataTableColumn>
+                        </b:dataTable>
+
+                    </h:panelGroup>
+                    <br />
+                    <br />
+                    <br />
+                    <h:link outcome="/index" value="#{bundle.ListProblemIndexLink}"/>
+                </h:form>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui = "http://java.sun.com/jsf/facelets"
+      xmlns:b="http://bootsfaces.net/ui">
+    <h:body>
+        <ui:composition> 
+            <b:navBar class="navItem" brand="MyCity" brandHref="#{application.contextPath}/faces/index.xhtml" inverse="true">
+                <b:navbarLinks pull="right">
+                    <b:navLink class="navItem" value="Home" href="#{application.contextPath}/faces/index.xhtml"></b:navLink>
+                    <b:navLink class="navItem" value="Events" rendered="#{!login.admin}" href="#{application.contextPath}/faces/admin/event/EventList.xhtml"></b:navLink>
+                    <b:navLink class="navItem" value="News" rendered="#{!login.admin}" href="#{application.contextPath}/faces/admin/news/NewsList.xhtml"></b:navLink>
+                    <b:navLink class="navItem" value="Places" rendered="#{!login.admin}" href="#{application.contextPath}/faces/admin/place/PlaceList.xhtml"></b:navLink>
+                    <b:navLink class="navItem" value="Report Problem" rendered="#{!login.admin}" href="#{application.contextPath}/faces/admin/problem/Create.xhtml"></b:navLink>
+                    <b:navLink class="navItem" value="Login" rendered="#{!login.loggedIn}" href="#{application.contextPath}/faces/login.xhtml"></b:navLink>
+                    <b:navLink class="navItem" value="Register" rendered="#{!login.loggedIn}" href="#{application.contextPath}/faces/register.xhtml"></b:navLink>
+                    <b:dropMenu value="Admin" rendered="#{login.admin}">
+                        <b:navLink class="navItem" value="Dashboard" href="#{application.contextPath}/faces/admin/adminPage.xhtml"></b:navLink>
+                        <b:navLink class="navItem" value="Users" href="#{application.contextPath}/faces/admin/user/List.xhtml"></b:navLink>
+                        <b:navLink class="navItem" value="Events" href="#{application.contextPath}/faces/admin/event/List.xhtml"></b:navLink>
+                        <b:navLink class="navItem" value="News" href="#{application.contextPath}/faces/admin/news/List.xhtml"></b:navLink>
+                        <b:navLink class="navItem" value="Problems" href="#{application.contextPath}/faces/admin/problem/List.xhtml"></b:navLink>
+                    </b:dropMenu>
+                    <b:dropMenu value="#{login.username}" rendered="#{login.loggedIn}">
+                        <h:form>
+                            <b:navCommandLink styleClass="btn" value="Logout" action="#{login.logout()}"></b:navCommandLink>
+                        </h:form>
+                    </b:dropMenu>
+                </b:navbarLinks>
+            </b:navBar>
+        </ui:composition>	
+    </h:body> 
+</html>
+

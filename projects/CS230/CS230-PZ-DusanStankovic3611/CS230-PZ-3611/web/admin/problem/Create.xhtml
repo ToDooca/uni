@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:b="http://bootsfaces.net/ui">
+    <h:body>   
+        <ui:composition template="../../layout/template.xhtml">
+            <ui:define name="body">
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+
+                <h:form styleClass="user-form">
+                    <b:iconAwesome style="fonts-size: 50px;" class="icons" value="fas fa-edit"/>
+                    <br/>
+                    <br/>
+                    <h:panelGrid columns="2"> 
+                        <h:outputLabel value="#{bundle.CreateProblemLabel_problemname}" for="problemname" />
+                        <b:inputText id="problemname" value="#{problemController.selected.problemname}" 
+                                     title="#{bundle.CreateProblemTitle_problemname}" required="true" requiredMessage="#{bundle.CreateProblemRequiredMessage_problemname}"/>
+
+                        <h:outputLabel value="#{bundle.CreateProblemLabel_problemdetalis}" for="problemdetalis" />
+                        <h:inputTextarea rows="4" cols="30" id="problemdetalis" value="#{problemController.selected.problemdetalis}" 
+                                         title="#{bundle.CreateProblemTitle_problemdetalis}" required="true" requiredMessage="#{bundle.CreateProblemRequiredMessage_problemdetalis}"/>
+
+                    </h:panelGrid>
+                    <br />
+                    <br />
+                    <b:commandButton style="width: 315px;" styleClass="btn-block" look="warning" 
+                                     action="#{problemController.create}" value="#{bundle.CreateProblemSaveLink}" />
+                    <br />
+                  
+                </h:form>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>

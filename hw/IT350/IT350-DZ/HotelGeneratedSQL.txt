@@ -1,0 +1,268 @@
+drop table if exists CONTENTS;
+
+drop table if exists COOK;
+
+drop table if exists CUSTOMER;
+
+drop table if exists DISH;
+
+drop table if exists EMPLOYEE;
+
+drop table if exists HOTEL;
+
+drop table if exists INGREDIENTS;
+
+drop table if exists MENU;
+
+drop table if exists RECEPTIONIST;
+
+drop table if exists RECIPE;
+
+drop table if exists RESERVATION;
+
+drop table if exists RESTAURANT;
+
+drop table if exists RESUPPLY;
+
+drop table if exists ROOM;
+
+drop table if exists SUPPLIER;
+
+drop table if exists WAITER;
+
+/*==============================================================*/
+/* Table: CONTENTS                                              */
+/*==============================================================*/
+create table CONTENTS
+(
+   DISH_ID              int not null,
+   primary key (DISH_ID)
+);
+
+/*==============================================================*/
+/* Table: COOK                                                  */
+/*==============================================================*/
+create table COOK
+(
+   EMPLOYEE_ID          int not null,
+   HOTEL_ID             int,
+   NAME                 text not null,
+   LAST_NAME            text not null,
+   WORK_SHIFT           int,
+   IS_CHEF              bool not null,
+   primary key (EMPLOYEE_ID)
+);
+
+/*==============================================================*/
+/* Table: CUSTOMER                                              */
+/*==============================================================*/
+create table CUSTOMER
+(
+   CUSTOMER_ID          int not null,
+   HOTEL_ID             int,
+   RESERVATION_ID       int,
+   NAME                 text not null,
+   LAST_NAME            text not null,
+   OTHER_SERVICES       bool not null,
+   primary key (CUSTOMER_ID)
+);
+
+/*==============================================================*/
+/* Table: DISH                                                  */
+/*==============================================================*/
+create table DISH
+(
+   DISH_ID              int not null,
+   DISH_NAME            text not null,
+   primary key (DISH_ID)
+);
+
+/*==============================================================*/
+/* Table: EMPLOYEE                                              */
+/*==============================================================*/
+create table EMPLOYEE
+(
+   EMPLOYEE_ID          int not null,
+   HOTEL_ID             int not null,
+   NAME                 text not null,
+   LAST_NAME            text not null,
+   WORK_SHIFT           int,
+   primary key (EMPLOYEE_ID)
+);
+
+/*==============================================================*/
+/* Table: HOTEL                                                 */
+/*==============================================================*/
+create table HOTEL
+(
+   HOTEL_ID             int not null,
+   RATING               int not null,
+   ADDRESS              text not null,
+   primary key (HOTEL_ID)
+);
+
+/*==============================================================*/
+/* Table: INGREDIENTS                                           */
+/*==============================================================*/
+create table INGREDIENTS
+(
+   INGREDIENT_ID        int not null,
+   primary key (INGREDIENT_ID)
+);
+
+/*==============================================================*/
+/* Table: MENU                                                  */
+/*==============================================================*/
+create table MENU
+(
+   FOOD                 text,
+   DRINK                text,
+   BEVERAGES            text
+);
+
+/*==============================================================*/
+/* Table: RECEPTIONIST                                          */
+/*==============================================================*/
+create table RECEPTIONIST
+(
+   EMPLOYEE_ID          int not null,
+   HOTEL_ID             int,
+   NAME                 text not null,
+   LAST_NAME            text not null,
+   WORK_SHIFT           int,
+   AVAILABLE_ROOMS      text not null,
+   RESERVED_ROOMS       text not null,
+   primary key (EMPLOYEE_ID)
+);
+
+/*==============================================================*/
+/* Table: RECIPE                                                */
+/*==============================================================*/
+create table RECIPE
+(
+   DISH_ID              int not null,
+   INGREDIENT_ID        int not null,
+   primary key (DISH_ID, INGREDIENT_ID)
+);
+
+/*==============================================================*/
+/* Table: RESERVATION                                           */
+/*==============================================================*/
+create table RESERVATION
+(
+   RESERVATION_ID       int not null,
+   CUSTOMER_ID          int not null,
+   EMPLOYEE_ID          int not null,
+   RESERVATION_FROM     datetime not null,
+   RESERVATION_TO       datetime not null,
+   primary key (RESERVATION_ID)
+);
+
+/*==============================================================*/
+/* Table: RESTAURANT                                            */
+/*==============================================================*/
+create table RESTAURANT
+(
+   NUM_OF_TABLES        int not null
+);
+
+/*==============================================================*/
+/* Table: RESUPPLY                                              */
+/*==============================================================*/
+create table RESUPPLY
+(
+   INGREDIENT_ID        int not null,
+   SUPPLIER_ID          int not null,
+   primary key (INGREDIENT_ID, SUPPLIER_ID)
+);
+
+/*==============================================================*/
+/* Table: ROOM                                                  */
+/*==============================================================*/
+create table ROOM
+(
+   ROOM_ID              int not null,
+   RESERVATION_ID       int not null,
+   ROOM_TYPE            text not null,
+   NUM_OF_BEDS          int not null,
+   primary key (ROOM_ID)
+);
+
+/*==============================================================*/
+/* Table: SUPPLIER                                              */
+/*==============================================================*/
+create table SUPPLIER
+(
+   SUPPLIER_ID          int not null,
+   SUPPLIER_NAME        text not null,
+   SUPPLIER_ADDRESS     text,
+   primary key (SUPPLIER_ID)
+);
+
+/*==============================================================*/
+/* Table: WAITER                                                */
+/*==============================================================*/
+create table WAITER
+(
+   EMPLOYEE_ID          int not null,
+   HOTEL_ID             int,
+   NAME                 text not null,
+   LAST_NAME            text not null,
+   WORK_SHIFT           int,
+   SERVING_AT_TABLE     text not null,
+   primary key (EMPLOYEE_ID)
+);
+
+alter table CONTENTS add constraint FK_CONTENTS foreign key ()
+      references MENU on delete restrict on update restrict;
+
+alter table CONTENTS add constraint FK_CONTENTS2 foreign key (DISH_ID)
+      references DISH (DISH_ID) on delete restrict on update restrict;
+
+alter table COOK add constraint FK_BASIC_INFO3 foreign key (EMPLOYEE_ID)
+      references EMPLOYEE (EMPLOYEE_ID) on delete restrict on update restrict;
+
+alter table COOK add constraint FK_COOKS_ON_SHIFT foreign key ()
+      references RESTAURANT on delete restrict on update restrict;
+
+alter table CUSTOMER add constraint FK_GUEST foreign key (HOTEL_ID)
+      references HOTEL (HOTEL_ID) on delete restrict on update restrict;
+
+alter table CUSTOMER add constraint FK_MAKING_RESERVATION2 foreign key (RESERVATION_ID)
+      references RESERVATION (RESERVATION_ID) on delete restrict on update restrict;
+
+alter table EMPLOYEE add constraint FK_STAFF foreign key (HOTEL_ID)
+      references HOTEL (HOTEL_ID) on delete restrict on update restrict;
+
+alter table MENU add constraint FK_MENU_TYPES foreign key ()
+      references RESTAURANT on delete restrict on update restrict;
+
+alter table RECEPTIONIST add constraint FK_BASIC_INFO foreign key (EMPLOYEE_ID)
+      references EMPLOYEE (EMPLOYEE_ID) on delete restrict on update restrict;
+
+alter table RECIPE add constraint FK_RECIPE foreign key (DISH_ID)
+      references DISH (DISH_ID) on delete restrict on update restrict;
+
+alter table RECIPE add constraint FK_RECIPE2 foreign key (INGREDIENT_ID)
+      references INGREDIENTS (INGREDIENT_ID) on delete restrict on update restrict;
+
+alter table RESERVATION add constraint FK_BOOKING foreign key (EMPLOYEE_ID)
+      references RECEPTIONIST (EMPLOYEE_ID) on delete restrict on update restrict;
+
+alter table RESERVATION add constraint FK_MAKING_RESERVATION foreign key (CUSTOMER_ID)
+      references CUSTOMER (CUSTOMER_ID) on delete restrict on update restrict;
+
+alter table RESUPPLY add constraint FK_RESUPPLY foreign key (INGREDIENT_ID)
+      references INGREDIENTS (INGREDIENT_ID) on delete restrict on update restrict;
+
+alter table RESUPPLY add constraint FK_RESUPPLY2 foreign key (SUPPLIER_ID)
+      references SUPPLIER (SUPPLIER_ID) on delete restrict on update restrict;
+
+alter table ROOM add constraint FK_ROOM_ASSIGNMENT foreign key (RESERVATION_ID)
+      references RESERVATION (RESERVATION_ID) on delete restrict on update restrict;
+
+alter table WAITER add constraint FK_BASIC_INFO2 foreign key (EMPLOYEE_ID)
+      references EMPLOYEE (EMPLOYEE_ID) on delete restrict on update restrict;
+
+alter table WAITER add constraint FK_WAITERS_ON_SHIFT foreign key ()
+      references RESTAURANT on delete restrict on update restrict;

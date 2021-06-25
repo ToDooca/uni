@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui = "http://java.sun.com/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:b="http://bootsfaces.net/ui">
+    <h:body>
+        <ui:composition template="layout/default.xhtml">	
+            <ui:define name="content">				
+                <h:form styleClass="user-form" prependId="false">
+                    <h3 style="margin-bottom: 25px;">Register</h3>
+
+                    <b:messages />
+
+                    <h:outputText value="Account" />
+
+                    <!-- validatorMessage="Username must be between 3 and 15 characters" -->
+                    <br/>
+                    <b:iconAwesome class="icons" value="fas fa-user-circle"/>
+                    <b:inputText id="username" fieldSize="lg" placeholder="Username" value="#{registration.username}" required="true" 
+                                 requiredMessage="Username is required" validator="#{registration.validateUsername}">
+                        <f:validateLength minimum="3" maximum="15" />
+                    </b:inputText>
+                    <b:message for="username" />
+
+                    <b:iconAwesome class="icons" value="fas fa-envelope"/>
+                    <b:inputText id="email" fieldSize="lg" placeholder="Email" value="#{registration.email}" required="true" requiredMessage="Email is required" validatorMessage="Email invalid">
+                        <f:validateRegex pattern="(?!.*\.\.)(^[^\.][^@\s]+@[^@\s]+\.[^@\s\.]+$)" />
+                    </b:inputText>
+                    <b:message for="email" />
+
+                    <b:iconAwesome class="icons" value="fas fa-address-card"/>
+                    <b:inputText id="firstName" fieldSize="lg" placeholder="First Name" value="#{registration.firstName}" required="true" requiredMessage="First name is required"/>
+                    <b:message for="firstName" />
+
+                    <b:iconAwesome class="icons" value="far fa-address-card"/>
+                    <b:inputText id="lastName" fieldSize="lg" placeholder="Last Name" value="#{registration.lastName}" required="true" requiredMessage="Last name is required"/>
+                    <b:message for="lastName" />
+
+                    <b:iconAwesome class="icons" value="fas fa-key"/>
+                    <b:inputSecret id="password" fieldSize="lg" placeholder="Password" value="#{registration.password}" required="true" requiredMessage="Password is required" binding="#{passwordComponent}" 
+                                   validatorMessage="Password must be between 3 and 15 characters">
+                        <f:validateLength minimum="3" maximum="15" />
+                    </b:inputSecret>
+                    <b:message for="password" />
+
+                    <b:inputSecret id="confpassword" fieldSize="lg" placeholder="Confirm Password" value="#{registration.confPassword}" 
+                                   required="true" requiredMessage="Password confirmation is required" validator="#{registration.validatePasswords}" 
+                                   validatorMessage="Passwords must match">
+                        <f:attribute name="passwordComponent" value="#{passwordComponent}" />
+                    </b:inputSecret>
+                    <b:message for="confpassword" />
+
+
+                    <b:commandButton style="margin-bottom: 15px;" look="success btn-block" size="lg" value="Register" action="#{registration.register()}"/>
+                    <p>Already have an account? <a href="login.xhtml">Login</a></p>
+                </h:form>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:b="http://bootsfaces.net/ui">
+
+    <ui:composition template="../../layout/template.xhtml">
+        <ui:define name="body">
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form styleClass="user-form">
+                <b:iconAwesome style="font-size: 50px;" class="icons" value="fas fa-edit"/>
+                <br/>
+                <br/>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditEventLabel_eventtitle}" for="eventtitle" />
+                    <b:inputText id="eventtitle" value="#{eventController.selected.eventtitle}" title="#{bundle.EditEventTitle_eventtitle}" required="true" requiredMessage="#{bundle.EditEventRequiredMessage_eventtitle}"/>
+                    <h:outputLabel value="#{bundle.EditEventLabel_eventdate}" for="eventdate" />
+                    <b:inputText id="eventdate" value="#{eventController.selected.eventdate}" title="#{bundle.EditEventTitle_eventdate}" required="true" requiredMessage="#{bundle.EditEventRequiredMessage_eventdate}"/>
+                    <h:outputLabel value="#{bundle.EditEventLabel_eventtext}" for="eventtext" />
+                    <h:inputTextarea rows="4" cols="30" id="eventtext" value="#{eventController.selected.eventtext}" title="#{bundle.EditEventTitle_eventtext}" required="true" requiredMessage="#{bundle.EditEventRequiredMessage_eventtext}"/>
+                </h:panelGrid>
+                <br/>
+                <br/>
+                <b:commandButton style="width: 305px;" styleClass="btn-block" look="success" 
+                                 action="#{eventController.update}" value="#{bundle.EditEventSaveLink}" />
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditEventViewLink}"/>
+                <br />
+                <h:commandLink action="#{eventController.prepareList}" value="#{bundle.EditEventShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditEventIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

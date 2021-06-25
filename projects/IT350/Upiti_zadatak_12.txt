@@ -1,0 +1,7 @@
+1. Naći sve predmete koji se drže na nekom studijskom programu (odaberi neki koji imaš u bazi) i nose 6 ili više espb.
+   Prikazati uz naziv predmeta i profesora koji drži predmet.
+2. Naći studenta koji ima najveću ocenu za predati projekat.
+3. Naći broj predmeta za svakog profesora, ne prikazivati profesore koji drže manje od jednog predmeta.
+4. Naći sve testove koji imaju maksimalan broj pitanja. (Npr. mogu biti 3 testa sa istim, najvećim brojem pitanja) Sortirati ih po date_sent.
+5. Za svaki studijski program čiji naziv sadrži reč 'info' prikazati profesore koji drže neke predmete na njemu.
+   Rezultate sortirati po nazivu Studijskog programa po nazivu opadajuće, i po broju esbp rastuće.

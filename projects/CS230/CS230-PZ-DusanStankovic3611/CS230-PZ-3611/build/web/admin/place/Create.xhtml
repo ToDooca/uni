@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:b="http://bootsfaces.net/ui">
+    <h:body>   
+        <ui:composition template="../../layout/template.xhtml">
+            <ui:define name="body">
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                
+                <h:form styleClass="user-form">
+                    <b:iconAwesome style="font-size: 50px;" class="icons" value="fas fa-edit"/>
+                    <br/>
+                    <br/>
+                    
+                    <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreatePlaceLabel_placename}" for="placename" />
+                    <b:inputText id="placename" value="#{placeController.selected.placename}" 
+                                 title="#{bundle.CreatePlaceTitle_placename}" required="true" requiredMessage="#{bundle.CreatePlaceRequiredMessage_placename}"/>
+                    
+                  
+                    <h:outputLabel value="#{bundle.CreatePlaceLabel_placeadress}" for="placeadress" />
+                    <b:inputText id="placeadress" value="#{placeController.selected.placeadress}" 
+                                 title="#{bundle.CreatePlaceTitle_placeadress}" required="true" requiredMessage="#{bundle.CreatePlaceRequiredMessage_placeadress}"/>
+                   
+                    <h:outputLabel value="#{bundle.CreatePlaceLabel_placetype}" for="placetype" />
+                    <b:inputText id="placetype" value="#{placeController.selected.placetype}" 
+                                 title="#{bundle.CreatePlaceTitle_placetype}" required="true" requiredMessage="#{bundle.CreatePlaceRequiredMessage_placetype}"/>
+                    
+                    <h:outputLabel value="#{bundle.CreatePlaceLabel_placedescription}" for="placedescription" />
+                    <h:inputTextarea rows="4" cols="30" id="placedescription" value="#{placeController.selected.placedescription}" 
+                                     title="#{bundle.CreatePlaceTitle_placedescription}" required="true" requiredMessage="#{bundle.CreatePlaceRequiredMessage_placedescription}"/>
+                    </h:panelGrid>
+                    <br />
+                    <br />
+                    <b:commandButton style="width: 315px;" styleClass="btn-block" look="secondary" 
+                                     action="#{placeController.create}" value="#{bundle.CreatePlaceSaveLink}" />
+                    <br />
+                    <br />
+                    <h:commandLink action="#{placeController.prepareList}" value="#{bundle.CreatePlaceShowAllLink}" immediate="true"/>
+                    <br />
+                    <br />
+                    <h:link outcome="/index" value="#{bundle.CreatePlaceIndexLink}"/>
+                </h:form>
+                
+            </ui:define>
+        </ui:composition>
+
+    </h:body>   
+</html>

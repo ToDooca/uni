@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a149a490-2cac-41d6-8ab0-19022865d43c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../CS103/dz4/CS103-DZ4/src/zadatak2/Zadatak2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CS103/dz4/CS103-DZ4/src/zadatak2/Zadatak2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../IT350/dz3-4/IT350-DZ/Hotel.cdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../IT350/dz3-4/IT350-DZ/Hotel.cdm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../IT350/dz3-4/IT350-DZ/IT350-DZ.prj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dz1/SE201-dz1-dusan_stankovic_3611.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../dz1/SE201-dz1-dusan_stankovic_3611.docx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Users\Dusan\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\202.7660.26\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1mAILizuxrAUIP7bXRluvZH8XGC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a149a490-2cac-41d6-8ab0-19022865d43c" name="Default Changelist" comment="" />
+      <created>1608929915931</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608929915931</updated>
+      <workItem from="1608929917146" duration="76000" />
+      <workItem from="1608930000524" duration="23000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

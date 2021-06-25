@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui = "http://java.sun.com/jsf/facelets"
+      xmlns:b="http://bootsfaces.net/ui">
+    <h:head>
+        <script src="https://kit.fontawesome.com/b019f2a083.js"></script>
+    </h:head>
+    <h:body>
+        <ui:composition template="layout/default.xhtml">	
+            <ui:define name="content">	
+                <h:form>
+                    <b:carousel disabled="true" interval="3500" style="width: 90%; margin: 0 auto; margin-bottom: 25px;">
+                        <b:carouselItem class="cItem">
+                            <img src="#{resource['imgs/img1.jpg']}" />
+                        </b:carouselItem>
+                        <b:carouselItem class="cItem">
+                            <img src="#{resource['imgs/img2.jpg']}" />
+                        </b:carouselItem>
+                    </b:carousel>
+                </h:form>
+                <div class="row">
+                    <div class="column">
+                        <div class="card">
+                            <a class="btn btn-info"  href="#{application.contextPath}/faces/admin/news/NewsList.xhtml">
+                                Read News</a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <a class="btn btn-success" href="#{application.contextPath}/faces/admin/event/EventList.xhtml">
+                                View Events</a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <a class="btn btn-warning" href="#{application.contextPath}/faces/admin/problem/Create.xhtml">
+                                Report Problem</a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <a class="btn btn-danger" href="#{application.contextPath}/faces/admin/place/PlaceList.xhtml">
+                                Check Places</a>
+                        </div>
+                    </div>
+                </div>
+
+                <b:column col-md="12">
+                    <h2>News</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ipsum augue, tincidunt quis lectus et, ultrices pretium tortor. Vestibulum vel semper tellus. </p>
+                </b:column>
+                <b:column col-md="12">
+                    <h2>Events</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ipsum augue, tincidunt quis lectus et, ultrices pretium tortor. Vestibulum vel semper tellus. </p>
+                </b:column>
+                <b:column col-md="12">
+                    <h2>Report A Problem</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ipsum augue, tincidunt quis lectus et, ultrices pretium tortor. Vestibulum vel semper tellus. </p>
+                </b:column>
+                <b:column col-md="12">
+                    <h2>Places</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ipsum augue, tincidunt quis lectus et, ultrices pretium tortor. Vestibulum vel semper tellus. </p>
+                </b:column>
+
+
+
+
+
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>

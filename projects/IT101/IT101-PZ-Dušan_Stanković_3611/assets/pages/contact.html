@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="author" content="Dusan Stankovic 3611" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="shortcut icon" href="../img/favico.png" type="image/x-icon" />
+		<title>Toyota | Contact</title>
+		<link rel="stylesheet" href="../css/bootstrap.css" />
+		<link rel="stylesheet" href="../css/contact.css" />
+		<link rel="stylesheet" href="../css/style.css" />
+	</head>
+
+	<body>
+		<header class="position-absolute">
+			<div class="row">
+				<div class="col-md-4 col-sm-12">
+					<a class="nav-link text-light" href="../../index.html"
+						><img src="../img/logo-default.png" alt=""
+					/></a>
+				</div>
+				<div class="col-md-8 col-sm-12">
+					<ul class="nav justify-content-end font-weight-bold">
+						<li class="nav-item"><a class="nav-link text-dark" href="./company.html">Company</a></li>
+						<li class="nav-item"><a class="nav-link text-dark" href="./products.html">Products</a></li>
+						<li class="nav-item"><a class="nav-link text-dark" href="./team.html">Team</a></li>
+						<li class="nav-item"><a class="nav-link text-dark" href="./careers.html">Careers</a></li>
+						<li class="nav-item"><a class="nav-link text-dark" href="./blog.html">Blog</a></li>
+						<li class="nav-item">
+							<a class="nav-link text-light active" href="./contact.html">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section id="company-contact">
+				<div class="container pt-5">
+					<div class="row">
+						<div class="col-1"></div>
+						<div id="errors" class="col-10"></div>
+
+						<div class="col-1"></div>
+					</div>
+					<div class="row">
+						<div class="col-md-5 col-sm-12">
+							<div class="mapouter">
+								<div class="gmap_canvas">
+									<iframe
+										width="600"
+										height="500"
+										id="gmap_canvas"
+										src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d417970.7992510065!2d137.09631!3d35.0718154!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004a86772f821e3%3A0x84c650390ac80a88!2sToyota%2C+Aichi+Prefecture%2C+Japan!5e0!3m2!1sen!2srs!4v1547915219330"
+										frameborder="1"
+										scrolling="no"
+										marginheight="0"
+										marginwidth="0"
+									></iframe>
+									<a href="https://www.pureblack.de/google-maps/">pureblack.de</a>
+								</div>
+								<style>
+									.mapouter {
+										text-align: right;
+										height: 500px;
+										width: 100%;
+									}
+									.gmap_canvas {
+										overflow: hidden;
+										background: none !important;
+										height: 500px;
+										width: 100%;
+									}
+								</style>
+							</div>
+						</div>
+						<div class="col-md-7 col-sm-12">
+							<form id="contact-form">
+								<div class="row">
+									<h4 class="card-title text-dark">Name:</h4>
+									<div class="input-group form-row mb-3">
+										<div class="col">
+											<input
+												type="text"
+												name="firstName"
+												class="form-control"
+												placeholder="First Name"
+											/>
+										</div>
+										<div class="col pr-0">
+											<input
+												type="text"
+												name="lastName"
+												class="form-control"
+												placeholder="Last Name"
+											/>
+										</div>
+									</div>
+									<div class="input-group">
+										<h4 class="card-title text-dark">Phone:</h4>
+										<div class="input-group mb-4">
+											<input type="text" name="phone" class="form-control" placeholder="Phone" />
+										</div>
+									</div>
+									<div class="input-group">
+										<h4 class="card-title text-dark">Message:</h4>
+										<div class="input-group mb-4">
+											<textarea
+												type="text"
+												name="message"
+												rows="7"
+												class="form-control"
+												placeholder="Message"
+											></textarea>
+										</div>
+									</div>
+
+									<div class="input-group">
+										<button type="submit" class="btn btn-dark btn-lg">Submit</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<div class="row">
+				<div class="col-2">Toyota</div>
+				<div class="col-8">
+					<div class="nav-item"><a class="nav-link text-light" href="./company.html">Company</a></div>
+					<div class="nav-item">
+						<a class="nav-link text-light active" href="./products.html">Products</a>
+					</div>
+					<div class="nav-item"><a class="nav-link text-light" href="./team.html">Team</a></div>
+					<div class="nav-item"><a class="nav-link text-light" href="./careers.html">Careers</a></div>
+					<div class="nav-item"><a class="nav-link text-light" href="./blog.html">Blog</a></div>
+					<div class="nav-item"><a class="nav-link text-light" href="./contact.html">Contact</a></div>
+				</div>
+				<div class="col-2 text-right">&copy; Dusan Stankovic</div>
+			</div>
+		</footer>
+
+		<script src="../js/jquery.js"></script>
+		<script src="../js/popper.js"></script>
+		<script src="../js/bootstrap.js"></script>
+		<script src="../js/contact.js"></script>
+	</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "id": "334bd063-cce3-457c-81a4-b6d76ea46fd5",
+  "version": "2.0",
+  "name": "SE201-PZ-selenium-test",
+  "url": "http://localhost:4200",
+  "tests": [],
+  "suites": [{
+    "id": "a7e9083d-993e-44fa-874a-9e45b100beb9",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://localhost:4200/"],
+  "plugins": []
+}

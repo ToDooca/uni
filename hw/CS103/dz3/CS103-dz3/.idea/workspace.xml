@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="afafde4d-80a0-4079-9d33-75204fc753dd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../dz4/CS103-DZ4/src/zadatak2/Zadatak2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../dz4/CS103-DZ4/src/zadatak2/Zadatak2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../IT350/dz3-4/IT350-DZ/Hotel.cdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../IT350/dz3-4/IT350-DZ/Hotel.cdm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../IT350/dz3-4/IT350-DZ/IT350-DZ.prj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../SE201/dz1/SE201-dz1-dusan_stankovic_3611.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SE201/dz1/SE201-dz1-dusan_stankovic_3611.docx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1jNbxsLhrrPxwjF7sXHq5mfpMz7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../projects/food_order_db/foodorder" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Zadatak3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="zadatak3.Zadatak3" />
+      <module name="CS103-dz3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="zadatak3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Zadatak3" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="afafde4d-80a0-4079-9d33-75204fc753dd" name="Default Changelist" comment="" />
+      <created>1603647748156</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603647748156</updated>
+      <workItem from="1603647749202" duration="58000" />
+      <workItem from="1603973038067" duration="1731000" />
+      <workItem from="1604478779715" duration="16000" />
+      <workItem from="1607376171096" duration="94000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>
