@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+html, body {
+    display: flex;
+}
+
+.menu{
+    float: left;
+    border: 2px solid deepskyblue;
+    background-color: rgba(0, 191, 255, 0.36);
+    width: 16vw;
+    height: 99.5vh;
+    top: 0;
+}
+
+.menu-text {
+    margin-top: 10em;
+    width: 6em;
+    transform: rotate(90deg);
+}
+
+li {
+    margin-top: 1em;
+    font-size: 20px;
+}
+
+.group-divider {
+    float: right;
+    width: 83vw;
+}
+
+header {
+    border: 2px solid hotpink;
+    background-color: rgba(255, 105, 180, 0.36);
+    text-align: center;
+}
+
+section {
+    border: 2px solid aquamarine;
+    background-color: rgba(127, 255, 212, 0.17);
+    display: flex;
+    height: 89vh;
+}
+
+article {
+    text-align: center;
+    border: 2px solid blueviolet;
+    background-color: rgba(138, 43, 226, 0.24);
+    float: left;
+    width: 53vw;
+    height: 87vh;
+    margin: 0.5em;
+}
+
+.met-logo {
+    height: 17em;
+}
+
+aside {
+    border: 2px solid crimson;
+    background-color: rgba(220, 20, 60, 0.22);
+    float: right;
+    width: 32vw;
+    text-align: center;
+    height: 88.5vh;
+}
+
+aside *{
+    margin: 0.2em;
+}
+
+aside form {
+    margin-top: 10em;
+}
+
+footer {
+    bottom: 0;
+    width: 82.5vw;
+    text-align: center;
+    border: 2px solid orange;
+    background-color: rgba(255, 165, 0, 0.3);
+    font-size: 12px;
+}

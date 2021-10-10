@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+html, body {
+    width: 100vw;
+}
+
+.header {
+    border: 2px solid hotpink;
+    background-color: rgba(255, 105, 180, 0.36);
+}
+
+header {
+    text-align: center;
+}
+
+nav {
+    width: 100vw;
+    text-align: center;
+    border: 2px solid deepskyblue;
+    background-color: rgba(0, 191, 255, 0.36);
+}
+
+.links {
+    display: inline-flex;
+    margin-top: 0.5em;
+}
+
+li {
+    margin-right: 2em;
+    font-size: 16px;
+}
+
+.section-divider {
+    float: left;
+}
+
+section {
+    border: 2px solid aquamarine;
+    background-color: rgba(127, 255, 212, 0.17);
+    display: flex;
+}
+
+article {
+    text-align: center;
+    border: 2px solid blueviolet;
+    background-color: rgba(138, 43, 226, 0.24);
+    float: left;
+    width: 65vw;
+    height: 76vh;
+    margin: 0.5em;
+}
+
+.met-logo {
+    height: 20em;
+}
+
+aside {
+    border: 2px solid crimson;
+    background-color: rgba(220, 20, 60, 0.22);
+    float: right;
+    width: 32vw;
+    text-align: center;
+    height: 81vh;
+}
+
+aside *{
+    margin: 0.2em;
+}
+
+aside form {
+    margin-top: 15em;
+}
+
+footer {
+    bottom: 0;
+    width: 100vw;
+    text-align: center;
+    border: 2px solid orange;
+    background-color: rgba(255, 165, 0, 0.3);
+    font-size: 12px;
+}
