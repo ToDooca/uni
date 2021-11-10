@@ -1,7 +1,42 @@
-/hw/CS230/CS230-DZ07/build/
-/hw/CS230/CS230-DZ08/build/
-/hw/CS230/CS230-DZ09/build/
-/hw/CS230/CS230-DZ11/build/
-/hw/CS230/CS230-DZ12/build/
+*.rar
+*.zip
+*.tar*
+node_modules
+.idea
+.vscode
+out
+build
+cmake-build-debug
+CMakeLists.txt
+
+build
+out
+cmake-build-debug
+dist
+target
 
 .idea
+.vscode
+.vs
+
+*.class
+
+venv
+node_modules
+__pycache__
+
+# MS and Libre office backup
+.~*
+
+# Powerdesigner backupfiles
+~*.docx
+
+# Powerdesigner backup files
+*.oob
+*.eab
+*.rqb
+*.pjb
+
+# Visaul Paradigm backup files
+*.vpp.bak_????
+*.vpp.lck

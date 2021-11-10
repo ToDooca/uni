@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 60%;
+    text-align: center;
+    margin: 4em auto;
+    background-color: antiquewhite;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 3px 5px 5px 	#696969;
+}
+.container h1, p {
+    color: 	#696969;
+}
+.container p {
+    margin: 1em auto;
+    font-size: x-large;
+}
+.flex-container{
+    width: 40%;
+    max-width: 400px;
+    margin: 2em auto;
+    display: flex;
+    flex-direction: column;
+}
+.flex-container label {
+    font-size: larger;
+}
