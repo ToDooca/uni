@@ -1,5 +1,5 @@
 {
-  "name": "rent-a-car",
+  "name": "met-hotels",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -20,7 +20,9 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "npm-sass": "^3.0.0",
     "rxjs": "~6.6.0",
+    "sass": "^1.43.4",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "rent-a-car": {
+    "MetHotels": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/rent-a-car",
+            "outputPath": "dist/MetHotels",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -27,8 +27,9 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
-              "src/styles.css"
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
+              "src/styles.css",
+
             ],
             "scripts": []
           },
@@ -69,10 +70,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "rent-a-car:build:production"
+              "browserTarget": "MetHotels:build:production"
             },
             "development": {
-              "browserTarget": "rent-a-car:build:development"
+              "browserTarget": "MetHotels:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +81,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "rent-a-car:build"
+            "browserTarget": "MetHotels:build"
           }
         },
         "test": {
@@ -104,5 +105,5 @@
       }
     }
   },
-  "defaultProject": "rent-a-car"
+  "defaultProject": "MetHotels"
 }
