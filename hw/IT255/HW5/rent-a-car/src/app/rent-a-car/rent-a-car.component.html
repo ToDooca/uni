@@ -1,0 +1,14 @@
+<div class="card" *ngFor="let car of carsList">
+  <mat-card>
+    <mat-card-title>Brend auta: {{car.brend}}</mat-card-title>
+    <mat-card-subtitle>Model auta: {{car.model}}</mat-card-subtitle>
+    <mat-card-content>
+      <h2>Opis auta:</h2>
+      <p>{{car.opis}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <h4>Cena iznajmljivanja: {{car.cena}} RSD</h4>
+      <button mat-flat-button color="warn">Iznajmi</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

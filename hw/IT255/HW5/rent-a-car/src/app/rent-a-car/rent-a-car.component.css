@@ -1,0 +1,23 @@
+.card{
+  display: inline-block;
+  align-items: center;
+  justify-content: space-between;
+  margin: 4em 3em;
+  border: 1px solid black;
+}
+
+.mat-card {
+  max-width: 20em;
+}
+
+h4{
+  margin-top: 1.8em;
+  float: left;
+}
+
+button{
+  margin-top: 1.2em;
+  float: right;
+}
+
+
